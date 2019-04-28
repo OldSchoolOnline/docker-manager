@@ -1,7 +1,9 @@
-#Docker Manager
+# Docker Manager
+
 Docker Manager is a web interface for managing Docker containers on a host. It is currently still WIP and not safe to use at all.
 
-##Running Docker Manager
+## Running Docker Manager
+
 Docker Manager requires python 3 and flask to be installed.
 
 Installation steps:
