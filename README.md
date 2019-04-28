@@ -8,7 +8,7 @@ Installation steps:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install 
+pip install -r requirements.txt
 ````
 
 Create a .flaskenv file with the following text:
