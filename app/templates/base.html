@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title>{{ title }} - Docker Manager</title>
+    {% else %}
+    <title>Docker Manager</title>
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <a href="/index">Docker Manager</a> | <a href="/containers">containers</a>
+    </header>
+    {% block content %}{% endblock %}
+  </body>
+</html>

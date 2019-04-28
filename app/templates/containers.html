@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if containers %}
+    <table>
+      <thead>
+        <th>CONTAINER ID</th>
+        <th>Image</th>
+        <th>Command</th>
+        <th>Created</th>
+        <th>Status</th>
+        <th>Ports</th>
+        <th>Names</th>
+      </thead>
+    {% for container in containers %}
+      <tr>
+        <td>{{ container.short_id }}</td>
+        <td>{{ container.attrs.Config.Image }}</td>
+        <td>{{ container.attrs.Config.Cmd }}</td>
+        <td>{{ container.attrs.Created }}</td>
+        <td>{{ container.attrs.State.Status }}</td>
+        <td>{{ container.attrs.Ports }}</td>
+        <td>{{ container.name }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>No containers found</p>
+  {% endif %}
+{% endblock %}
